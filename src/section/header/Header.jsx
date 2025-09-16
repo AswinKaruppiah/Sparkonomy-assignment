@@ -11,7 +11,7 @@ export default function Header() {
         </button>
         <h5>Dashboard</h5>
         <div className="profile">
-          <img src="/src/assets/header/Shape.png" alt="profile" />
+          <img src="/header/Shape.png" alt="profile" />
         </div>
       </div>
     </nav>
