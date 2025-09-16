@@ -1,0 +1,209 @@
+.home-section {
+  @apply p-4 sm:p-8 min-h-screen;
+}
+
+.invoice-dashboard {
+  @apply grid grid-cols-1 lg:grid-cols-5 gap-8;
+}
+
+// Create Invoice Section
+.create-invoice-section {
+  @apply col-span-1 lg:col-span-2 space-y-4;
+
+  .create-invoice-card {
+    @apply bg-light-gray cursor-pointer rounded-[40px] p-8 text-center;
+  }
+
+  .create-icon {
+    @apply my-6 rounded-full flex items-center justify-center;
+  }
+
+  .plus-icon {
+    @apply text-white w-16 sm:w-24 h-16 sm:h-24;
+  }
+
+  .create-title {
+    @apply text-3xl font-bold mb-2;
+    background: linear-gradient(
+      169.7deg,
+      #dd2a7b 1.49%,
+      #9747ff 42.07%,
+      #334cca 99.84%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .create-description {
+    @apply text-secondary text-sm;
+  }
+
+  .upload-text {
+    @apply text-primary text-center;
+  }
+}
+
+// Time Period Section
+.time-period-section {
+  @apply w-full;
+
+  .time-period-card {
+    @apply bg-white rounded-3xl px-4 py-5 border-2 border-light-gray;
+  }
+
+  .time-period-header {
+    @apply flex justify-between items-center mb-4;
+  }
+
+  .time-period-label {
+    @apply text-primary-gray text-lg font-medium;
+  }
+
+  .date-range-placeholder {
+    @apply text-secondary text-sm;
+  }
+
+  .period-buttons {
+    @apply flex gap-3 flex-wrap;
+  }
+
+  .period-button {
+    @apply px-5 py-1.5 rounded-3xl border-2 border-light-gray bg-white text-secondary font-medium flex items-center gap-1.5 transition-all duration-200 hover:border-primary/30;
+
+    &.active {
+      background: linear-gradient(
+        159.79deg,
+        rgba(221, 42, 123, 0.05) -5.47%,
+        rgba(151, 71, 255, 0.05) 74.41%,
+        rgba(51, 76, 202, 0.05) 147%
+      );
+
+      svg {
+        color: #9747ff;
+      }
+
+      span {
+        background: linear-gradient(
+          169.7deg,
+          #dd2a7b 1.49%,
+          #9747ff 42.07%,
+          #334cca 99.84%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}
+
+// Financial Summary Section
+.financial-summary-section {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+
+  .financial-card {
+    @apply bg-white rounded-2xl px-4 py-5 border-2 border-light-gray;
+
+    &.total-earnings {
+      @apply md:col-span-1;
+    }
+
+    &.payment-awaited,
+    &.payment-overdue {
+      @apply md:col-span-1;
+    }
+  }
+
+  .financial-label {
+    @apply text-secondary text-lg font-medium block mb-2;
+  }
+
+  .financial-amount {
+    @apply text-primary text-3xl font-bold;
+  }
+}
+
+// Your Invoices Section
+.your-invoices-section {
+  @apply w-full my-10;
+
+  .invoices-header {
+    @apply flex justify-between items-center mb-4;
+
+    .invoices-title {
+      @apply text-2xl font-bold text-secondary;
+    }
+
+    .dropdown-button {
+      @apply p-2 transition-colors;
+    }
+  }
+
+  .invoices-list {
+    @apply space-y-3;
+
+    .invoice-item {
+      @apply bg-white rounded-2xl p-3 sm:p-4 border-2 border-light-gray flex justify-between items-center hover:border-primary/20 transition-colors;
+    }
+
+    .invoice-left {
+      @apply flex flex-col;
+    }
+
+    .invoice-title {
+      @apply text-lg font-medium text-primary-gray mb-1;
+    }
+
+    .invoice-details {
+      @apply flex text-sm sm:text-base items-center gap-1 sm:gap-2;
+
+      .invoice-amount {
+        @apply text-secondary;
+      }
+
+      .invoice-due {
+        @apply text-secondary;
+      }
+    }
+
+    .invoice-right {
+      @apply flex gap-2 sm:gap-4 items-center;
+
+      button {
+        @apply flex gap-0 sm:gap-2 items-center text-sm sm:text-base rounded-3xl font-medium;
+        &.update-status {
+          @apply bg-primary  text-white border px-4 sm:px-5 py-2 transition-colors;
+        }
+      }
+
+      .status-badge {
+        @apply px-4 py-1.5 rounded-3xl text-sm sm:text-base font-medium;
+
+        &.unpaid,
+        &.draft {
+          @apply bg-light-gray text-secondary;
+        }
+
+        &.disputed,
+        &.overdue {
+          background: #ffb1b1;
+          color: #ff2d55;
+        }
+
+        &.paid {
+          background: #9cefb8;
+          color: #34c759;
+        }
+
+        &.partially-paid,
+        &.awaited {
+          background: #fffae5;
+          color: #ffcc00;
+        }
+      }
+    }
+  }
+}

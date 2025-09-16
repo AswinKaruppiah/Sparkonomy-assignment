@@ -1,0 +1,25 @@
+nav {
+  @apply px-6 py-3 w-full;
+  background: #e7cde8;
+
+  button {
+    @apply flex sm:hidden items-center gap-1 h-fit;
+    span {
+      @apply opacity-90 text-base;
+    }
+  }
+
+  .wrapper {
+    @apply max-w-screen-2xl mx-auto flex gap-6 justify-between items-center;
+
+    h5 {
+      @apply text-xl font-semibold;
+    }
+
+    .profile {
+      img {
+        @apply h-12 aspect-square rounded-full cursor-pointer;
+      }
+    }
+  }
+}
