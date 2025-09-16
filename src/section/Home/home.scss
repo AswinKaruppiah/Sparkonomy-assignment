@@ -128,7 +128,7 @@
 
 // Your Invoices Section
 .your-invoices-section {
-  @apply w-full my-10;
+  @apply w-full mb-10;
 
   .invoices-header {
     @apply flex justify-between items-center mb-4;
@@ -158,7 +158,7 @@
     }
 
     .invoice-details {
-      @apply flex text-sm sm:text-base items-center gap-1 sm:gap-2;
+      @apply flex text-sm sm:text-base items-center flex-wrap justify-start gap-1 sm:gap-2;
 
       .invoice-amount {
         @apply text-secondary;
@@ -173,7 +173,7 @@
       @apply flex gap-2 sm:gap-4 items-center;
 
       button {
-        @apply flex gap-0 sm:gap-2 items-center text-sm sm:text-base rounded-3xl font-medium;
+        @apply flex gap-1 sm:gap-2 items-center text-sm sm:text-base rounded-3xl font-medium;
         &.update-status {
           @apply bg-primary  text-white border px-4 sm:px-5 py-2 transition-colors;
         }
@@ -204,6 +204,45 @@
           color: #ffcc00;
         }
       }
+    }
+  }
+}
+
+// chart
+.chart-section {
+  @apply border-2 border-light-gray rounded-2xl w-full my-10 p-6 bg-white;
+
+  .chart-header {
+    @apply mb-6;
+
+    h6 {
+      @apply text-primary-gray text-xl font-bold mb-2;
+    }
+
+    p {
+      @apply text-secondary text-sm;
+    }
+  }
+
+  .chart-container {
+    @apply w-full;
+
+    // Recharts custom styles
+    .recharts-wrapper {
+      @apply w-full;
+    }
+
+    .recharts-cartesian-grid-horizontal line,
+    .recharts-cartesian-grid-vertical line {
+      @apply stroke-gray-100;
+    }
+
+    .recharts-legend-wrapper {
+      @apply text-sm;
+    }
+
+    .recharts-tooltip-wrapper {
+      @apply text-xs;
     }
   }
 }
