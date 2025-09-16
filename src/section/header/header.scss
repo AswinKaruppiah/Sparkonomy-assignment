@@ -1,6 +1,5 @@
 nav {
-  @apply px-6 py-3 w-full;
-  background: #e7cde8;
+  @apply px-6 py-3 w-full bg-transparent;
 
   button {
     @apply flex sm:hidden items-center gap-1 h-fit;

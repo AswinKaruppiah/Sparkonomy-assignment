@@ -1,5 +1,5 @@
 .home-section {
-  @apply p-4 sm:p-8 min-h-screen;
+  @apply p-4 sm:p-8 sm:mt-4 min-h-screen bg-white rounded-t-[54px];
 }
 
 .invoice-dashboard {
@@ -210,10 +210,10 @@
 
 // chart
 .chart-section {
-  @apply border-2 border-light-gray rounded-2xl w-full my-10 p-6 bg-white;
+  @apply border-2 border-light-gray rounded-2xl w-full my-10  bg-white;
 
   .chart-header {
-    @apply mb-6;
+    @apply px-3 pt-3 sm:pt-6 sm:px-6;
 
     h6 {
       @apply text-primary-gray text-xl font-bold mb-2;
