@@ -9,7 +9,7 @@ nav {
   }
 
   .wrapper {
-    @apply max-w-screen-2xl mx-auto flex gap-6 justify-between items-center;
+    @apply max-w-[1800px] mx-auto flex gap-6 justify-between items-center;
 
     h5 {
       @apply text-xl font-semibold;
